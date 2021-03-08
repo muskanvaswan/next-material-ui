@@ -2,21 +2,27 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import grey from '@material-ui/core/colors/grey';
 import red from '@material-ui/core/colors/red';
 
+let colorOne = red[900]
+let colorTwo = grey[900]
+let bg = 'rgba(255, 255, 255, 1)'
+
 const theme = createMuiTheme({
   palette: {
     background: {
-      paper: red[900],
-      default: grey[800]
+      paper: colorOne,
+      default: bg,
     },
+    type: 'dark',
     text:{
-      primary: grey[50],
+      primary: colorTwo,
     },
 
     primary: {
-      main: red[500],
+      main: colorOne,
+      contrastText: 'white',
     },
     secondary: {
-      main: grey[900],
+      main: colorTwo,
     },
   },
 });
