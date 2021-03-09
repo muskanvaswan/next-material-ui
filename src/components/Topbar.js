@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -49,12 +49,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
   },
   drawer: {
-    width: drawerWidth,
+    width: '100%',
     flexShrink: 0,
 
   },
   drawerPaper: {
-    width: drawerWidth,
+    width: '100%',
     backgroundColor: theme.palette.primary
   },
   drawerHeader: {
@@ -86,7 +86,6 @@ ElevationScroll.propTypes = {
 
 export default function TopBar(props) {
   const classes = useStyles();
-  const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -125,7 +124,7 @@ export default function TopBar(props) {
       </AppBar>
       </ElevationScroll>
       <Drawer
-        className={classes.drawer}
+        className={clsx(classes.drawer, "primary")}
         variant="persistent"
         anchor="bottom"
         open={open}
