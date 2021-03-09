@@ -11,12 +11,12 @@ let colorTwo = '#fff'
 let colorThree = '#1F2833'
 let colorFour = '#45A29E'
 let bg = '#0B0C10'
-let paper = 'rgba(#1c2136, 1)'
+let paper = 'rgba(31, 35, 51, 0.95)'
 
 let theme = createMuiTheme({
   palette: {
     background: {
-      paper: colorThree,
+      paper: paper,
       default: bg,
     },
     type: 'dark',
