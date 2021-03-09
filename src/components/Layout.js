@@ -16,7 +16,9 @@ export default class Layout extends React.Component {
       <React.Fragment>
         <ThemeProvider theme={theme}>
         <TopBar/>
+
         {this.props.children}
+
         {this.props.noFooter ? "" :<Footer sticky={this.props.short} bright={this.props.bright}/>}
 
       </ThemeProvider>
