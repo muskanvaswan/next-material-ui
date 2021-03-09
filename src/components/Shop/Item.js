@@ -13,6 +13,8 @@ import IconButton from '@material-ui/core/IconButton'
 
 import ShoppingCart from '@material-ui/icons/ShoppingCart'
 import FavoriteBorderTwoToneIcon from '@material-ui/icons/FavoriteBorderTwoTone';
+
+import Grow from '@material-ui/core/Grow'
 const useStyles = makeStyles((theme) => ({
 
   card: {
@@ -33,6 +35,11 @@ export default function Item(props){
 
   return (
     <Grid item key={props.card} xs={12} sm={6} md={4}>
+      <Grow
+          in
+          style={{ transformOrigin: '0 0 0' }}
+          timeout={{enter: 3000}}
+        >
       <Card className={classes.card}>
 
 
@@ -59,6 +66,7 @@ export default function Item(props){
           </IconButton>
         </CardActions>
       </Card>
+    </Grow>
     </Grid>
   )
 }
