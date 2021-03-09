@@ -138,7 +138,7 @@ export default function TopBar(props) {
             <ExpandMoreIcon />
           </IconButton>
         </div>
-        <Divider />
+
         <List>
           <ListItem button key='About Us'>
             <ListItemIcon><InboxIcon /> </ListItemIcon>
@@ -153,7 +153,7 @@ export default function TopBar(props) {
             <ListItemText primary='Privacy Policy' />
           </ListItem>
         </List>
-        <Divider />
+
         <List>
           <ListItem button key='About Us'>
             <ListItemIcon><InboxIcon /> </ListItemIcon>
