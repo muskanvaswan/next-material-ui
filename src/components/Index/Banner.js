@@ -1,5 +1,5 @@
 import Typography from '@material-ui/core/Typography'
-import { motion } from "framer-motion";
+
 
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -10,10 +10,11 @@ const useStyles = makeStyles((theme) => ({
     top: '40%',
     transform: 'translate(-50%, -50%)'
   },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
 }));
+
+import Typewriter from 'typewriter-effect';
+
+
 
 
 
@@ -22,14 +23,16 @@ export default function Banner(){
 
   return (
     <div className={classes.center}>
-      <motion.h1
-        animate={{ rotate: 360 }}
-        transition={{ duration: 2 }}
-      >
-      <Typography variant="h1" align="center" color="primary">
-        This is a project
-      </Typography>
-      </motion.h1>
+      <Typography variant="h3">
+      <Typewriter
+        options={{
+          strings: ['Hello', 'World'],
+          autoStart: true,
+          loop: true,
+        }}
+      />
+    </Typography>
+
     </div>
 
   )
