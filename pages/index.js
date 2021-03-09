@@ -7,7 +7,7 @@ import Banner from '../src/components/Index/Banner'
 export default function Home() {
   return (
     <Container>
-      <Layout short>
+      <Layout noFooter>
         <Banner />
       </Layout>
     </Container>
