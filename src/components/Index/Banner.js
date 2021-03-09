@@ -7,9 +7,12 @@ const useStyles = makeStyles((theme) => ({
   center: {
     position: 'absolute',
     left: '50%',
-    top: '40%',
+    top: '50%',
     transform: 'translate(-50%, -50%)'
   },
+  title:{
+    fontWeight: 'bold',
+  }
 }));
 
 import Typewriter from 'typewriter-effect';
@@ -23,15 +26,16 @@ export default function Banner(){
 
   return (
     <div className={classes.center}>
-      <Typography variant="h3">
+      <Typography variant="h2" color="primary" align="center" className={classes.title}>
       <Typewriter
         options={{
-          strings: ['Hello', 'World'],
+          strings: ['Hello, We are BrandName', 'Welcome to our Website'],
           autoStart: true,
           loop: true,
         }}
       />
     </Typography>
+    <Typography variant="p" align="center" color="secondary">If you're looking for fresh Fashion, consider your search over.</Typography>
 
     </div>
 
