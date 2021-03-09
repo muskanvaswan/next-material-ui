@@ -1,6 +1,7 @@
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 
+import Link from 'next/Link'
 
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 
     // Unrelated styles:
-    color: 'white',
+    color: theme.palette.primary.contrastText,
     borderRadius: 12,
     transition: `${theme.palette.primary.main} 1000ms linear, ${theme.palette.secondary.main}
       1000ms linear, ${theme.palette.background.paper} 1000ms linear`
@@ -55,9 +56,10 @@ export default function Banner(){
     </Typography>
     <Typography variant="p" align="center" color="secondary" >If you're looking for fresh Fashion, consider your search over.</Typography>
     <br/>
-    <Button className={classes.gradButton} component="div" align="center" fullWidth>
+    <Link href="http://localhost:3000/shop"><Button  className={classes.gradButton} component="div" align="center" fullWidth>
       Hello World
-    </Button>
+    </Button></Link>
+
 
     </div>
 
