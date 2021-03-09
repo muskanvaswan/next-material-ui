@@ -1,4 +1,5 @@
 import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
 
 
 import { makeStyles } from '@material-ui/core/styles'
@@ -12,6 +13,23 @@ const useStyles = makeStyles((theme) => ({
   },
   title:{
     fontWeight: 'bold',
+  },
+  gradButton: {
+    background: `
+      linear-gradient(
+        170deg,
+        ${theme.palette.primary.main},
+        ${theme.palette.secondary.main}
+      )
+    `,
+    marginTop: '20px',
+
+
+    // Unrelated styles:
+    color: 'white',
+    borderRadius: 12,
+    transition: `${theme.palette.primary.main} 1000ms linear, ${theme.palette.secondary.main}
+      1000ms linear, ${theme.palette.background.paper} 1000ms linear`
   }
 }));
 
@@ -35,7 +53,11 @@ export default function Banner(){
         }}
       />
     </Typography>
-    <Typography variant="p" align="center" color="secondary">If you're looking for fresh Fashion, consider your search over.</Typography>
+    <Typography variant="p" align="center" color="secondary" >If you're looking for fresh Fashion, consider your search over.</Typography>
+    <br/>
+    <Button className={classes.gradButton} component="div" align="center" fullWidth>
+      Hello World
+    </Button>
 
     </div>
 
