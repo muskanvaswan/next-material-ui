@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton'
 
-import ShoppingCart from '@material-ui/icons/ShoppingCart'
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import FavoriteBorderTwoToneIcon from '@material-ui/icons/FavoriteBorderTwoTone';
 
 import Grow from '@material-ui/core/Grow'
@@ -59,7 +59,7 @@ export default function Item(props){
         </CardContent>
         <CardActions>
           <IconButton size="small" color="primary">
-            <ShoppingCart/>
+            <AddShoppingCartIcon />
           </IconButton>
           <IconButton size="small" color="primary">
             <FavoriteBorderTwoToneIcon/>
