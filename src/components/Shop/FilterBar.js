@@ -130,11 +130,18 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     minWidth: 120,
   },
+  sticky: {
+    position: 'fixed',
+    top: 200
+  }
 }));
 
 export default function FilterBar(props){
   const classes = useStyles();
   return (
-    <Filter classes={classes} />
+    <div>
+      <Filter classes={classes} />
+    </div>
+
   )
 }
