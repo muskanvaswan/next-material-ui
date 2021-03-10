@@ -31,7 +31,7 @@ export default function Hero(){
     <div className={classes.heroContent} id="hero">
       <Container maxWidth="sm">
         <Typography component="h1" variant="h2" align="center" color="textPrimary" >
-          Album layout
+          Catalogue
         </Typography>
         <Typography variant="h5" align="center" color="textSecondary" paragraph>
           Something short and leading about the collection below—its contents, the creator, etc.
