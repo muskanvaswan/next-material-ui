@@ -18,8 +18,8 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: window.innerHeight - 150,
-    width: window.innerWidth,
+    height: (typeof window === "undefined" ?570:window.innerHeight - 150),
+    width: (typeof window === "undefined" ?3000: window.innerWidth),
     left: 0,
   },
   image: {
