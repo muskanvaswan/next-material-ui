@@ -2,7 +2,8 @@ import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import Button from '@material-ui/core/Button'
+{/*import Button from '@material-ui/core/Button'
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';*/}
 
 import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
@@ -51,7 +52,7 @@ class Filter extends React.Component{
   render(){
 
     return (
-        <Grid container xs={12} spacing={4} className={this.props.classes.marginHeavy} justify="center">
+        <Grid container spacing={4} className={this.props.classes.marginHeavy} justify="center">
           <Grid item>
             <TextField
             margin="normal"
@@ -105,7 +106,11 @@ class Filter extends React.Component{
               label="Secondary"
             />
           </Grid>
-
+          {/*<Grid item >
+            <Button href="#" className={this.props.classes.marginAlign}  color="primary" aria-label="Filter" endIcon={<NavigateNextIcon/>}>
+              Apply
+            </Button>
+          </Grid>*/}
         </Grid>
     )
   }
@@ -126,6 +131,9 @@ const useStyles = makeStyles((theme) => ({
   },
   marginAlign: {
     marginTop: theme.spacing(2),
+  },
+  marginAlign2: {
+    marginTop: theme.spacing(3),
   },
   formControl: {
     margin: theme.spacing(1),
