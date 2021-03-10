@@ -13,6 +13,7 @@ import IconButton from '@material-ui/core/IconButton'
 
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import FavoriteBorderTwoToneIcon from '@material-ui/icons/FavoriteBorderTwoTone';
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 import Link from '@material-ui/core/Link'
 
@@ -52,11 +53,9 @@ export default function Item(props){
           />
 
         <CardContent className={classes.cardContent}>
-          <Link href={`/products/${props.card}`} as={`/products/${props.card}`}>
-            <Typography gutterBottom variant="h5" component="h2">
-              {props.heading}
-            </Typography>
-          </Link>
+          <Typography gutterBottom variant="h5" component="h2">
+            {props.heading}
+          </Typography>
           <Typography>
             {props.children}
           </Typography>
@@ -68,8 +67,8 @@ export default function Item(props){
           <IconButton size="small" color="primary">
             <FavoriteBorderTwoToneIcon/>
           </IconButton>
-          <IconButton size="small" color="primary">
-            <FavoriteBorderTwoToneIcon/>
+          <IconButton size="small" color="primary" href={`/products/${props.card}`}>
+            <KeyboardArrowRightIcon/>
           </IconButton>
         </CardActions>
       </Card>
