@@ -1,5 +1,8 @@
 import React from 'react';
 
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
@@ -38,13 +41,14 @@ export default function Hero(){
         <div className={classes.heroButtons}>
           <Grid container spacing={2} justify="center">
             <Grid item>
-              <Button variant="contained" color="primary">
-                Main call to action
+              <Button href="#"  size="small" color="primary" size="large" variant="contained" startIcon={<ShoppingCartIcon />}>
+                Proceed To Cart
               </Button>
             </Grid>
+
             <Grid item>
-              <Button variant="outlined" color="primary">
-                Secondary action
+              <Button href="#"  size="small" color="primary" size="large" variant="outlined" startIcon={<FavoriteIcon />}>
+                View Wishlist
               </Button>
             </Grid>
           </Grid>
