@@ -17,6 +17,7 @@ export default function Album() {
     enter: 3000,
     exit: 2000
   }
+
   return (
     <Layout bright>
       <React.Fragment>
@@ -26,7 +27,7 @@ export default function Album() {
 
           <Hero />
 
-          <Items />
+          <Items/>
         </main>
         </Fade>
 
