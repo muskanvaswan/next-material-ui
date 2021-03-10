@@ -2,6 +2,7 @@ import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 
+import Button from '@material-ui/core/Button'
 
 import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
@@ -50,7 +51,7 @@ class Filter extends React.Component{
   render(){
 
     return (
-        <Grid container spacing={4} className={this.props.classes.marginHeavy} justify="center">
+        <Grid container xs={12} spacing={4} className={this.props.classes.marginHeavy} justify="center">
           <Grid item>
             <TextField
             margin="normal"
@@ -99,11 +100,12 @@ class Filter extends React.Component{
             </FormControl>
           </Grid>
           <Grid item className={this.props.classes.marginAlign}>
-          <FormControlLabel
-            control={<Checkbox checked={this.state.checked} onChange={this.handleCheck} />}
-            label="Secondary"
-          />
+            <FormControlLabel
+              control={<Checkbox checked={this.state.checked} onChange={this.handleCheck} />}
+              label="Secondary"
+            />
           </Grid>
+
         </Grid>
     )
   }
