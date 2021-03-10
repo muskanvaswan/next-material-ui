@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignInSide() {
+export default function Item(props) {
   const classes = useStyles();
 
   return (
@@ -49,7 +49,7 @@ export default function SignInSide() {
       <Grid item xs={false} sm={4} md={5} className={classes.image} />
       <Grid item xs={12} sm={8} md={7} component={Paper} elevation={6} square>
         <div className={classes.paper}>
-          <Typography variant="h1">Heading</Typography>
+          <Typography variant="h1">Heading-{props.itemId}</Typography>
           <Typography variant="h5">SubHeading</Typography>
           <Typography variant="p" margin="normal">
             This is a media card. You can use this section to describe the content.This is a media card. You can use this section to describe the content.This is a media card. You can use this section to describe the content.This is a media card. You can use this section to describe the content.This is a media card. You can use this section to describe the content.This is a media card. You can use this section to describe the content.This is a media card. You can use this section to describe the content.This is a media card. You can use this section to describe the content.
