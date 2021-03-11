@@ -137,7 +137,7 @@ export default function Dashboard() {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
-    <Layout flex noFooter>
+    <Layout flex noFooter brightTopbar>
       <div className={classes.root}>
 
       <Drawer
