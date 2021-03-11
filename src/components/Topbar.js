@@ -48,7 +48,14 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: '100%',
-    backgroundColor: theme.palette.primary
+  },
+  drawerPaperBright :{
+    width: '100%',
+    backgroundColor: theme.palette.secondary.main,
+    opacity: 0.9,
+    color: theme.palette.primary.contrastText,
+    zIndex: theme.zIndex.drawer + 1,
+    fill: theme.palette.primary.contrastText,
   },
   drawerHeader: {
     display: 'flex',
@@ -122,7 +129,7 @@ export default function TopBar(props) {
         anchor="bottom"
         open={open}
         classes={{
-          paper: classes.drawerPaper,
+          paper: (props.bright? classes.drawerPaperBright: classes.drawerPaper),
         }}
       >
         <div className={classes.drawerHeader}>
