@@ -16,11 +16,11 @@ export default class Layout extends React.Component {
       <React.Fragment>
 
         <div style={this.props.flex ? {display: 'box'}: {}}>
-          <TopBar/>
+          <TopBar bright={this.props.brightTopbar}/>
 
           {this.props.children}
 
-          {this.props.noFooter ? "" :<Footer sticky={this.props.short} bright={this.props.bright}/>}
+          {this.props.noFooter ? "" :<Footer sticky={this.props.short} bright={this.props.brightFooter}/>}
         </div>
 
 
