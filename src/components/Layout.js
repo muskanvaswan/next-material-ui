@@ -5,8 +5,8 @@ import Footer from './Footer.js'
 
 
 import Button from '@material-ui/core/Button'
-import {ThemeProvider} from '@material-ui/core/styles'
-import theme from '../Theme'
+
+
 
 
 
@@ -14,14 +14,16 @@ export default class Layout extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <ThemeProvider theme={theme}>
-        <TopBar/>
 
-        {this.props.children}
+        <div style={this.props.flex ? {display: 'box'}: {}}>
+          <TopBar/>
 
-        {this.props.noFooter ? "" :<Footer sticky={this.props.short} bright={this.props.bright}/>}
+          {this.props.children}
 
-      </ThemeProvider>
+          {this.props.noFooter ? "" :<Footer sticky={this.props.short} bright={this.props.bright}/>}
+        </div>
+
+
       </React.Fragment>
       )
   }
