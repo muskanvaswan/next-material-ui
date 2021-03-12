@@ -57,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: theme.zIndex.drawer + 1,
     fill: theme.palette.primary.contrastText,
   },
+
   drawerHeader: {
     display: 'flex',
     alignItems: 'center',
