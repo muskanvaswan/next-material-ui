@@ -23,22 +23,10 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from '../../src/components/user/listItems';
 import Layout from '../../src/components/Layout'
 
-
+import Copyright from '../../src/components/Copyright'
 import Deposits from '../../src/components/user/Deposits';
 import Orders from '../../src/components/user/Orders';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const drawerWidth = 240;
 
