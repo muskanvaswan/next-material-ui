@@ -1,13 +1,18 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid'
+import GridList from '@material-ui/core/GridList'
+import GridListTile from '@material-ui/core/GridListTile'
 
 export default function Tiles(props){
   return (
+    const tiles = [1, 2, 3, 4]
     <React.Fragment>
-      <Grid container>
-        <Grid item></Grid>
-
-      </Grid>
+      <GridList cellHeight={160} className="" cols={3}>
+        {tiles.map((tile) => (
+          <GridListTile key={tile} cols={2}>
+            <img src="https://source.unsplash.com/random" alt={tile} />
+          </GridListTile>
+        ))}
+      </GridList>
     </React.Fragment>
   )
 }
