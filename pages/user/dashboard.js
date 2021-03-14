@@ -26,6 +26,7 @@ import Layout from '../../src/components/Layout'
 import Copyright from '../../src/components/Copyright'
 import Deposits from '../../src/components/user/Deposits';
 import Orders from '../../src/components/user/Orders';
+import Tiles from '../../src/components/user/Tiles'
 
 
 const drawerWidth = 240;
@@ -169,7 +170,7 @@ export default function Dashboard() {
               {/* Chart */}
               <Grid item xs={12} md={8} lg={9}>
                 <Paper className={fixedHeightPaper}>
-
+                  <Tiles />
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
