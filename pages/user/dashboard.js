@@ -117,6 +117,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
+  const [price, setPrice] = React.useState(7343.00)
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -177,7 +178,7 @@ export default function Dashboard() {
               {/* Recent Deposits */}
               <Grid item xs={12} md={4} lg={3}>
                 <Paper className={fixedHeightPaper}>
-                  <Deposits />
+                  <Deposits price={`$ ${price}.00`} handlePrice={setPrice}/>
                 </Paper>
               </Grid>
               {/* Recent Orders */}
