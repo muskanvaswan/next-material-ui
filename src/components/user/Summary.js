@@ -11,7 +11,7 @@ import Tiles from './Tiles'
 
 const useStyles = makeStyles((theme) => ({
   gridButtons: {
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(3),
   },
 }));
 
@@ -23,7 +23,9 @@ export default function Summary(){
         <Grid item xs={12} md={8} lg={9}>
 
           <Typography variant="h4">Oeder Summary</Typography>
-          <Typography variant="p">This order is expected to be delivered in 3-5 Business days</Typography>
+          <Typography variant="p"><br/><b>Delivery Address:</b> <br/> Line 1 XYZ,  City, 000000 <br/> </Typography>
+          <Typography variant="p"><br/>This order is expected to be delivered in 3-5 Business days</Typography>
+
           <Grid container spacing={2} className={classes.gridButtons}>
             <Grid item>
               <Button href="#"  size="small" color="primary" size="large" variant="contained" >
