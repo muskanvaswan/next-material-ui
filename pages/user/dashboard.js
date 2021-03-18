@@ -26,7 +26,7 @@ import Layout from '../../src/components/Layout'
 import Copyright from '../../src/components/Copyright'
 import Deposits from '../../src/components/user/Deposits';
 import Orders from '../../src/components/user/Orders';
-import Tiles from '../../src/components/user/Tiles'
+import Summary from '../../src/components/user/Summary'
 
 
 const drawerWidth = 240;
@@ -170,16 +170,10 @@ export default function Dashboard() {
               {/* Chart */}
               <Grid item xs={12} md={8} lg={9}>
                 <Paper className={fixedHeightPaper}>
-                  <Grid container spacing={3}>
-                    <Grid item xs={12} md={8} lg={9}>
-                    </Grid>
-                    <Grid item xs={12} md={4} lg={3}>
-                      <Tiles />
-                    </Grid>
-                  </Grid>
-
+                  <Summary/>
                 </Paper>
               </Grid>
+
               {/* Recent Deposits */}
               <Grid item xs={12} md={4} lg={3}>
                 <Paper className={fixedHeightPaper}>
