@@ -17,14 +17,13 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function Tiles(props){
-  const tiles = [1, 2, 3, 4]
-   const classes = useStyles();
+  const classes = useStyles();
 
   return (
 
     <React.Fragment>
       <GridList cellHeight={100} className="" cols={2}>
-        {tiles.map((tile) => (
+        {props.imgs.map((tile) => (
           <Grid item key={tile} className={classes.tileContainer}>
             <img src="https://source.unsplash.com/random" alt={tile} className={classes.tileImage}/>
           </Grid>
