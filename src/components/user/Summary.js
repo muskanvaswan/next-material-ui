@@ -22,8 +22,8 @@ export default function Summary(){
       <Grid container>
         <Grid item xs={12} md={8} lg={9}>
 
-          <Typography variant="h4">Oeder Summary</Typography>
-          <Typography variant="p"><br/><b>Delivery Address:</b> <br/> Line 1 XYZ,  City, 000000 <br/> </Typography>
+          <Typography variant="h5">Oeder Summary</Typography>
+          <Typography variant="p"><br/><b>Delivery Address:</b> Line 1 XYZ,  <br/> City, 000000 <br/> </Typography>
           <Typography variant="p"><br/>This order is expected to be delivered in 3-5 Business days</Typography>
 
           <Grid container spacing={2} className={classes.gridButtons}>
@@ -42,7 +42,7 @@ export default function Summary(){
 
         </Grid>
         <Grid item xs={12} md={4} lg={3}>
-          <Tiles />
+          <Tiles imgs={[1, 2, 3, 4]}/>
         </Grid>
       </Grid>
     </React.Fragment>
