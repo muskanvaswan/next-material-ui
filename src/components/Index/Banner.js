@@ -1,7 +1,7 @@
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 
-import Link from 'next/Link'
+import Link from 'next/link'
 
 import { makeStyles } from '@material-ui/core/styles'
 
