@@ -68,6 +68,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function ListItemLink(props) {
+  return <ListItem button component="a" {...props} />;
+}
+
 function ElevationScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -88,6 +92,7 @@ ElevationScroll.propTypes = {
 export default function TopBar(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const [login, setLogin] = React.useState(true);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -141,18 +146,25 @@ export default function TopBar(props) {
         </div>
 
         <List>
-          <ListItem button key='About Us'>
+          <ListItemLink key='Home' href="/">
             <ListItemIcon><InboxIcon /> </ListItemIcon>
-            <ListItemText primary='About Us' />
-          </ListItem>
-          <ListItem button key='Contact Us'>
+            <ListItemText primary='Home' />
+          </ListItemLink>
+          {login ?
+            <ListItemLink key='Dashboard' href="/user/dashboard">
+              <ListItemIcon><InboxIcon /> </ListItemIcon>
+              <ListItemText primary='Dashboard' />
+            </ListItemLink>
+            :
+            <ListItemLink key='Sign In' href="/accounts/sign-in">
+              <ListItemIcon><InboxIcon /> </ListItemIcon>
+              <ListItemText primary='Sign In' />
+            </ListItemLink>
+          }
+          <ListItemLink key='Shop Now' href="/shop">
             <ListItemIcon><InboxIcon /> </ListItemIcon>
-            <ListItemText primary='Contact Us' />
-          </ListItem>
-          <ListItem button key='Privacy Policy'>
-            <ListItemIcon><InboxIcon /> </ListItemIcon>
-            <ListItemText primary='Privacy Policy' />
-          </ListItem>
+            <ListItemText primary='Shop Now' />
+          </ListItemLink>
         </List>
 
         <List>
