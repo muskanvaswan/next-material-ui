@@ -11,13 +11,8 @@ export default function Product() {
   const { id } = router.query
   return (
     <Layout >
-
         <Item itemId={id}/>
         <More />
-
-
-
     </Layout>
-
   )
 }
